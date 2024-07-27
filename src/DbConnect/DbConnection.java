@@ -1,19 +1,14 @@
 package DbConnect;
 
+import Classes.Funcionarios;
+import Classes.User;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import Classes.User;
-import Classes.Funcionarios;
 
 public class DbConnection {
     private static final String URL = "jdbc:sqlite:DataBase/RH_Manager_DB.db"; // Corrigido a URL
@@ -198,5 +193,7 @@ public class DbConnection {
         }
         return funcionarioPesquisado;
     }
+
+
 }
 
