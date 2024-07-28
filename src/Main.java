@@ -2,7 +2,6 @@ import Classes.Funcionarios;
 import Classes.User;
 import DbConnect.DbConnection;
 
-import javax.swing.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -23,27 +22,29 @@ public class Main {
         User usuarioLogado = realizarLogin(username, password);
         if (usuarioLogado != null){
             System.out.println("\nLogin feito com sucesso!");
-            System.out.println("\nDeseja lançar uma presença? digite 1 para sim, 2 para não");
-            int optionPresenca = scanner.nextInt();
-            scanner.nextLine();
-            if (optionPresenca == 1){
-                System.out.println("Informe o Id do funcionario:");
-                Integer IdFuncionario = scanner.nextInt();
-                Funcionarios funcionario = DbConnection.infoFuncionario(IdFuncionario);
+            int optionPresenca = 0;
+            do{
+                System.out.println("\nDeseja lançar uma presença? digite 1 para sim, 2 para não");
+                optionPresenca = scanner.nextInt();
                 scanner.nextLine();
-                System.out.println("Informe se você esta entrando ou saindo, digite 1 para entra e 2 para sair:");
-                Integer NovaEntrada_Saida = scanner.nextInt();
-                scanner.nextLine();
-                String Data_Hora = gerarData_Hora(NovaEntrada_Saida);
-                String caminho = gerarRelatorio(funcionario, Data_Hora);
-            }
+                if (optionPresenca == 1){
+                    System.out.println("Informe o Id do funcionario:");
+                    Integer IdFuncionario = scanner.nextInt();
+                    Funcionarios funcionario = DbConnection.infoFuncionario(IdFuncionario);
+                    scanner.nextLine();
+                    System.out.println("Informe se você esta entrando ou saindo, digite 1 para entra e 2 para sair:");
+                    Integer NovaEntrada_Saida = scanner.nextInt();
+                    scanner.nextLine();
+                    String Data_Hora = gerarData_Hora(NovaEntrada_Saida);
+                    String caminho = gerarRelatorio(funcionario, Data_Hora);
+                }
+            }while (optionPresenca != 2);
         }else {
             System.out.println("\nUsuario ou senha invalido");
         }
     }
 
     private static Connection connect() {
-
         String url = "jdbc:sqlite:DataBase/RH_Manager_DB.db";
         Connection conn = null;
         try {
