@@ -8,7 +8,6 @@ public class Main {
         TelaLoginPresenca telaLoginPresenca = new TelaLoginPresenca();
 
 
-
    /* private static String gerarData_Hora(Integer NovaEntrada_Saida){
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");

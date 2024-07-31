@@ -9,8 +9,8 @@ public class Funcionarios {
     private String cargo;
     private String horario;
     private Integer FuncionarioId;
+    private String PasswordPresenca;
 
-    // Getters and setters
     public String getNome() {
         return nome;
     }
@@ -73,5 +73,13 @@ public class Funcionarios {
 
     public void setFuncionarioId(Integer FuncionarioId) {
         this.FuncionarioId = FuncionarioId;
+    }
+
+    public String getPasswordPresenca() {
+        return PasswordPresenca;
+    }
+
+    public void setPasswordPresenca(String passwordPresenca) {
+        this.PasswordPresenca = passwordPresenca;
     }
 }

@@ -1,16 +1,11 @@
 package Telas;
 
-import Classes.UserPresence;
+import Classes.Funcionarios;
 import DbConnect.DbConnection;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 
 public class TelaLoginPresenca {
     private JFrame FrameLoginPresenca;
@@ -36,7 +31,7 @@ public class TelaLoginPresenca {
         ButtonLoginLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UserPresence funcLogado = new UserPresence();
+                Funcionarios funcLogado = new Funcionarios();
                 funcLogado = realizarLogin();
                 if (funcLogado != null) {
                     JOptionPane.showMessageDialog(FrameLoginPresenca, "Login feito com sucesso!\n");
@@ -50,31 +45,12 @@ public class TelaLoginPresenca {
         });
     }
 
-    private UserPresence realizarLogin(){
+    private Funcionarios realizarLogin(){
         Integer username = Integer.parseInt(UsernameFieldLogin.getText());
         String password = new String(PasswordFieldLogin.getPassword());
+        Funcionarios funcionario = DbConnection.loginFuncionario(username,password);
 
-        String sql = "SELECT * FROM Usuarios_Presenca WHERE username = ? AND password = ?";
-
-        try (Connection conn = DbConnection.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setInt(1, username);
-            pstmt.setString(2, password);
-
-            ResultSet rs = pstmt.executeQuery();
-
-            if (rs.next()) {
-                UserPresence funcionario = new UserPresence();
-                funcionario.setUsername(rs.getInt("username"));
-                funcionario.setPassword(rs.getString("password"));
-                funcionario.setUserPresenceId(rs.getInt("Id"));
-                return funcionario;
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return null;
+        return funcionario;
     }
 
     public void limparCampos() {

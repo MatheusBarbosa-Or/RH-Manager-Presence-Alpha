@@ -194,6 +194,38 @@ public class DbConnection {
         return funcionarioPesquisado;
     }
 
+    public static Funcionarios loginFuncionario(Integer username, String password){
+        String sql = "SELECT * FROM Funcionarios WHERE Id = ? AND PasswordPresenca = ?";
+
+        try (Connection conn = DbConnection.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, username);
+            pstmt.setString(2, password);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                Funcionarios funcionario = new Funcionarios();
+
+                funcionario.setNome(rs.getString("Nome"));
+                funcionario.setCpf(rs.getString("CPF"));
+                funcionario.setEmail(rs.getString("Email"));
+                funcionario.setDataNascimento(rs.getString("DataNascimento"));
+                funcionario.setGenero(rs.getString("Genero"));
+                funcionario.setCargo(rs.getString("Cargo"));
+                funcionario.setHorario(rs.getString("Horario"));
+                funcionario.setFuncionarioId(rs.getInt("Id"));
+                funcionario.setPasswordPresenca(rs.getString("PasswordPresenca"));
+
+                return funcionario;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
 
 }
 
