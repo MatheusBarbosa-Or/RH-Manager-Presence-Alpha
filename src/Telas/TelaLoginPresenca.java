@@ -14,15 +14,13 @@ public class TelaLoginPresenca {
     private JPasswordField PasswordFieldLogin;
     private JButton ButtonLoginLogin;
     private JLabel IconLogin;
-    private JLabel MenuTitleLogin;
     private JLabel PasswordTitle;
     private JPanel PanelLoginPresenca;
-
 
     public TelaLoginPresenca(){
         FrameLoginPresenca = new JFrame("RH Manager - Alpha");
         FrameLoginPresenca.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        FrameLoginPresenca.setSize(600, 360);
+        FrameLoginPresenca.setSize(600, 440);
         FrameLoginPresenca.setLocationRelativeTo(null);
         FrameLoginPresenca.add(PanelLoginPresenca);
         FrameLoginPresenca.pack();

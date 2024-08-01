@@ -4,26 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d3fa8c-6fcd-410e-9c5f-983634055094" name="Changes" comment="First Commit!">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/Outros.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/Outros2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/Profile F.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/Profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/Profile_F_G.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/Profile_M_G.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/TelaLogin.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/calendario.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/calendario_G.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/saida M.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/usuarios-alt_G.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IMG/usuarios-alt_GG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Telas/TelaHomepage.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Telas/TelaHomepage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Telas/TelaLogin.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Telas/TelaLogin.java" afterDir="false" />
+    <list default="true" id="07d3fa8c-6fcd-410e-9c5f-983634055094" name="Changes" comment="Telas funcionando e sistema de entrada não funcional. :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/RH_Manager_DB.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Relatorios/Relatorio_897008.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +60,9 @@
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "206",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/J.Matheus/IdeaProjects/Presenca_Teste/src/IMG",
+    "last_opened_file_path": "C:/Users/J.Matheus/IdeaProjects/Presenca_Teste/Database",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -78,10 +70,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\Database" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\src\IMG" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\src" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\src\Classes" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Classes" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -101,12 +97,30 @@
       <option name="project" value="LOCAL" />
       <updated>1722049543420</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Primeiras Telas!">
+      <option name="closed" value="true" />
+      <created>1722138972703</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722138972703</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Telas funcionando e sistema de entrada não funcional. :)">
+      <option name="closed" value="true" />
+      <created>1722397398933</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722397398933</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="First Commit!" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit!" />
+    <MESSAGE value="Primeiras Telas!" />
+    <MESSAGE value="Telas funcionando e sistema de entrada não funcional. :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Telas funcionando e sistema de entrada não funcional. :)" />
   </component>
 </project>
