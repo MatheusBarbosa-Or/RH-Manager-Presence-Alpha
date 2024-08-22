@@ -1,6 +1,7 @@
 package Classes;
 
-public class Funcionarios {
+public class Funcionario {
+
     private String nome;
     private String cpf;
     private String email;
@@ -8,8 +9,9 @@ public class Funcionarios {
     private String genero;
     private String cargo;
     private String horario;
-    private Integer FuncionarioId;
-    private String PasswordPresenca;
+    private Integer funcionarioId;
+    private String passwordPresenca;
+    private String passwordSalt;
 
     public String getNome() {
         return nome;
@@ -68,18 +70,26 @@ public class Funcionarios {
     }
 
     public Integer getFuncionarioId() {
-        return FuncionarioId;
+        return funcionarioId;
     }
 
     public void setFuncionarioId(Integer FuncionarioId) {
-        this.FuncionarioId = FuncionarioId;
+        this.funcionarioId = FuncionarioId;
     }
 
     public String getPasswordPresenca() {
-        return PasswordPresenca;
+        return passwordPresenca;
     }
 
     public void setPasswordPresenca(String passwordPresenca) {
-        this.PasswordPresenca = passwordPresenca;
+        this.passwordPresenca = passwordPresenca;
+    }
+
+    public String getPasswordSalt() {
+        return passwordSalt;
+    }
+
+    public void setPasswordSalt(String passwordSalt) {
+        this.passwordSalt = passwordSalt;
     }
 }

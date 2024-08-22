@@ -1,7 +1,8 @@
 package Telas;
 
-import Classes.Funcionarios;
+import Classes.Funcionario;
 import DbConnect.DbConnection;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -29,7 +30,7 @@ public class TelaLoginPresenca {
         ButtonLoginLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Funcionarios funcLogado = new Funcionarios();
+                Funcionario funcLogado = new Funcionario();
                 funcLogado = realizarLogin();
                 if (funcLogado != null) {
                     JOptionPane.showMessageDialog(FrameLoginPresenca, "Login feito com sucesso!\n");
@@ -43,10 +44,10 @@ public class TelaLoginPresenca {
         });
     }
 
-    private Funcionarios realizarLogin(){
+    private Funcionario realizarLogin(){
         Integer username = Integer.parseInt(UsernameFieldLogin.getText());
         String password = new String(PasswordFieldLogin.getPassword());
-        Funcionarios funcionario = DbConnection.loginFuncionario(username,password);
+        Funcionario funcionario = DbConnection.loginFuncionario(username,password);
 
         return funcionario;
     }

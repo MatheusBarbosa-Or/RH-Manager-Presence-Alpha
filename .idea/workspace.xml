@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07d3fa8c-6fcd-410e-9c5f-983634055094" name="Changes" comment="Telas 100% funcionais, sistema de entradas completo! ;p">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Funcionarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Funcionarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presenca_Teste.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Presenca_Teste.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Funcionarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Funcionario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -57,7 +59,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/J.Matheus/IdeaProjects/Presenca_Teste/Database&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/J.Matheus/IdeaProjects/Presenca_Teste/ArquivosJAR/bytes-1.5.0.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -65,11 +67,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\ArquivosJAR" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\Database" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\src\IMG" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste" />
       <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\src" />
-      <recent name="C:\Users\J.Matheus\IdeaProjects\Presenca_Teste\src\Classes" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Classes" />
@@ -116,8 +118,27 @@
       <option name="project" value="LOCAL" />
       <updated>1722478162421</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Telas 100% funcionais, sistema de entradas completo! ;p">
+      <option name="closed" value="true" />
+      <created>1722573032598</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722573032598</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />

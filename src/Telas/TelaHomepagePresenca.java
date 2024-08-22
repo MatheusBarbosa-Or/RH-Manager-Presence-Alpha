@@ -1,6 +1,6 @@
 package Telas;
 
-import Classes.Funcionarios;
+import Classes.Funcionario;
 import DbConnect.DbConnection;
 
 import javax.swing.*;
@@ -23,7 +23,7 @@ public class TelaHomepagePresenca {
     private JFrame FrameLoginPresenca;
     private Integer novaEntrada_Saida = 0;
 
-    public TelaHomepagePresenca(JFrame frameLoginPresenca, Funcionarios funcLogado){
+    public TelaHomepagePresenca(JFrame frameLoginPresenca, Funcionario funcLogado){
         FrameHomepagePresenca = new JFrame("RH Manager - Alpha");
         FrameHomepagePresenca.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         FrameHomepagePresenca.setSize(450, 250);

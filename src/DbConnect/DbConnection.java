@@ -1,6 +1,7 @@
 package DbConnect;
 
-import Classes.Funcionarios;
+import Classes.Funcionario;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 import java.sql.*;
 
@@ -25,31 +26,39 @@ public class DbConnection {
         return conn;
     }
 
-    public static Funcionarios loginFuncionario(Integer username, String password){
-        String sql = "SELECT * FROM Funcionarios WHERE Id = ? AND PasswordPresenca = ?";
+    public static Funcionario loginFuncionario(Integer username, String password){
+        String sql = "SELECT * FROM Funcionarios WHERE Id = ?";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, username);
-            pstmt.setString(2, password);
 
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                Funcionarios funcionario = new Funcionarios();
+                String DbPasswordHash = rs.getString("PasswordPresenca");
+                String DbSaltHash = rs.getString("PasswordSalt");
 
-                funcionario.setNome(rs.getString("Nome"));
-                funcionario.setCpf(rs.getString("CPF"));
-                funcionario.setEmail(rs.getString("Email"));
-                funcionario.setDataNascimento(rs.getString("DataNascimento"));
-                funcionario.setGenero(rs.getString("Genero"));
-                funcionario.setCargo(rs.getString("Cargo"));
-                funcionario.setHorario(rs.getString("Horario"));
-                funcionario.setFuncionarioId(rs.getInt("Id"));
-                funcionario.setPasswordPresenca(rs.getString("PasswordPresenca"));
+                String saltedPassword = password + DbSaltHash;
+                BCrypt.Result result = BCrypt.verifyer().verify(saltedPassword.toCharArray(), DbPasswordHash);
 
-                return funcionario;
+                if (result.verified) {
+                    Funcionario funcionario = new Funcionario();
+                    funcionario.setNome(rs.getString("Nome"));
+                    funcionario.setCpf(rs.getString("CPF"));
+                    funcionario.setEmail(rs.getString("Email"));
+                    funcionario.setDataNascimento(rs.getString("DataNascimento"));
+                    funcionario.setGenero(rs.getString("Genero"));
+                    funcionario.setCargo(rs.getString("Cargo"));
+                    funcionario.setHorario(rs.getString("Horario"));
+                    funcionario.setFuncionarioId(rs.getInt("Id"));
+                    funcionario.setPasswordPresenca(DbPasswordHash);
+
+                    return funcionario;
+                } else {
+                    return null;
+                }
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -57,7 +66,8 @@ public class DbConnection {
         return null;
     }
 
-    public static String inserirPresenca(String data, String entrada, Funcionarios funcLogado){
+
+    public static String inserirPresenca(String data, String entrada, Funcionario funcLogado){
         String sql = "INSERT INTO Presenca (Data, Entrada_Saida, IdFuncionario) VALUES (?, ?, ?)";
 
         try (Connection conn = connect();
@@ -72,7 +82,7 @@ public class DbConnection {
         return null;
     }
 
-    public static String updatePresenca(String data, String saida, Funcionarios funcLogado){
+    public static String updatePresenca(String data, String saida, Funcionario funcLogado){
         String sql = "UPDATE Presenca SET Entrada_Saida = Entrada_Saida || ? WHERE Data = ? AND IdFuncionario = ?";
 
 
