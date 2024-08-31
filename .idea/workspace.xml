@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d3fa8c-6fcd-410e-9c5f-983634055094" name="Changes" comment="Verificação de senhas com hash code funcional! ;)">
+    <list default="true" id="07d3fa8c-6fcd-410e-9c5f-983634055094" name="Changes" comment="Pequenas alterações ;)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724289745387</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pequenas alterações ;)">
+      <option name="closed" value="true" />
+      <created>1725068944718</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725068944718</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +158,7 @@
     <MESSAGE value="Telas funcionando e sistema de entrada não funcional. :)" />
     <MESSAGE value="Telas 100% funcionais, sistema de entradas completo! ;p" />
     <MESSAGE value="Verificação de senhas com hash code funcional! ;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Verificação de senhas com hash code funcional! ;)" />
+    <MESSAGE value="Pequenas alterações ;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pequenas alterações ;)" />
   </component>
 </project>
