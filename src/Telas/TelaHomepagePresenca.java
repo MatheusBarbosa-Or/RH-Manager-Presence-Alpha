@@ -64,10 +64,15 @@ public class TelaHomepagePresenca {
                 novaEntrada_Saida = 1;
                 String data = gerarData(novaEntrada_Saida);
                 String entrada = gerarHora(novaEntrada_Saida);
-                DbConnection.inserirPresenca(data, entrada, funcLogado);
-                JOptionPane.showMessageDialog(FrameLoginPresenca, "Presença Confirmada!\n");
-                FrameHomepagePresenca.setVisible(false);
-                FrameLoginPresenca.setVisible(true);
+                Boolean verifyEntradaFunc = DbConnection.verifyEntrada(data, funcLogado);
+                if (verifyEntradaFunc.equals(false)){
+                    DbConnection.inserirEntrada(data, entrada, funcLogado);
+                    JOptionPane.showMessageDialog(FrameLoginPresenca, "Presença Confirmada!\n");
+                    FrameHomepagePresenca.setVisible(false);
+                    FrameLoginPresenca.setVisible(true);
+                }else {
+                    JOptionPane.showMessageDialog(FrameLoginPresenca, "Presença Já Existente!\n");
+                }
             }
         });
 
@@ -77,10 +82,15 @@ public class TelaHomepagePresenca {
                 novaEntrada_Saida = 2;
                 String data = gerarData(novaEntrada_Saida);
                 String saida = gerarHora(novaEntrada_Saida);
-                DbConnection.updatePresenca(data, saida, funcLogado);
-                JOptionPane.showMessageDialog(FrameLoginPresenca, "Saida Confirmada!\n");
-                FrameHomepagePresenca.setVisible(false);
-                FrameLoginPresenca.setVisible(true);
+                Boolean verifySaidaFunc = DbConnection.verifySaida(data, funcLogado);
+                if (verifySaidaFunc.equals(true)){
+                    DbConnection.inserirSaida(data, saida, funcLogado);
+                    JOptionPane.showMessageDialog(FrameLoginPresenca, "Saida Confirmada!\n");
+                    FrameHomepagePresenca.setVisible(false);
+                    FrameLoginPresenca.setVisible(true);
+                }else {
+                    JOptionPane.showMessageDialog(FrameLoginPresenca, "Saida Já Existente!\n");
+                }
             }
         });
     }
@@ -103,7 +113,7 @@ public class TelaHomepagePresenca {
         if (NovaEntrada_Saida == 1) {
             hora = ("Horario da Entrada: " + formattedTime);
         } else if (NovaEntrada_Saida == 2) {
-            hora = (" - Horario da Saida: " + formattedTime);
+            hora = ("Horario da Saida: " + formattedTime);
         }
         return (hora);
     }

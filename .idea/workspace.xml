@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d3fa8c-6fcd-410e-9c5f-983634055094" name="Changes" comment="Telas 100% funcionais, sistema de entradas completo! ;p">
+    <list default="true" id="07d3fa8c-6fcd-410e-9c5f-983634055094" name="Changes" comment="Verificação de senhas com hash code funcional! ;)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presenca_Teste.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Presenca_Teste.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Funcionarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Funcionario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DbConnect/DbConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaHomepagePresenca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/TelaLoginPresenca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722573032598</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Verificação de senhas com hash code funcional! ;)">
+      <option name="closed" value="true" />
+      <created>1724289745387</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724289745387</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +153,7 @@
     <MESSAGE value="Primeiras Telas!" />
     <MESSAGE value="Telas funcionando e sistema de entrada não funcional. :)" />
     <MESSAGE value="Telas 100% funcionais, sistema de entradas completo! ;p" />
-    <option name="LAST_COMMIT_MESSAGE" value="Telas 100% funcionais, sistema de entradas completo! ;p" />
+    <MESSAGE value="Verificação de senhas com hash code funcional! ;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verificação de senhas com hash code funcional! ;)" />
   </component>
 </project>

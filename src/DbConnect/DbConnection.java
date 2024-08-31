@@ -66,15 +66,15 @@ public class DbConnection {
         return null;
     }
 
-
-    public static String inserirPresenca(String data, String entrada, Funcionario funcLogado){
-        String sql = "INSERT INTO Presenca (Data, Entrada_Saida, IdFuncionario) VALUES (?, ?, ?)";
-
+    public static String inserirEntrada(String data, String entrada, Funcionario funcLogado){
+        String sql = "INSERT INTO Presenca (Data, Entrada, Saida, IdFuncionario) VALUES (?, ?, ?, ?)";
+        String saidaPadrão = "";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, data);
             pstmt.setString(2, entrada);
-            pstmt.setInt(3, funcLogado.getFuncionarioId());
+            pstmt.setString(3, saidaPadrão);
+            pstmt.setInt(4, funcLogado.getFuncionarioId());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -82,9 +82,8 @@ public class DbConnection {
         return null;
     }
 
-    public static String updatePresenca(String data, String saida, Funcionario funcLogado){
-        String sql = "UPDATE Presenca SET Entrada_Saida = Entrada_Saida || ? WHERE Data = ? AND IdFuncionario = ?";
-
+    public static String inserirSaida(String data, String saida, Funcionario funcLogado){
+        String sql = "UPDATE Presenca SET Saida = ? WHERE Data = ? AND IdFuncionario = ?";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -96,5 +95,51 @@ public class DbConnection {
             System.out.println(e.getMessage());
         }
         return null;
+    }
+
+    public static boolean verifyEntrada(String data, Funcionario funcLogado){
+        String sql = "SELECT Data FROM Presenca WHERE Data = ? AND IdFuncionario = ?";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, data);
+            pstmt.setInt(2, funcLogado.getFuncionarioId());
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()){
+                String checkData = rs.getString("Data");
+                if (checkData.equals(data)){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+
+    public static boolean verifySaida(String data, Funcionario funcLogado){
+        String sql = "SELECT Saida FROM Presenca WHERE Data = ? AND IdFuncionario = ?";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, data);
+            pstmt.setInt(2, funcLogado.getFuncionarioId());
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()){
+                String checkSaida = rs.getString("Saida");
+                if (checkSaida.equals("")){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
     }
 }

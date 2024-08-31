@@ -21,7 +21,7 @@ public class TelaLoginPresenca {
     public TelaLoginPresenca(){
         FrameLoginPresenca = new JFrame("RH Manager - Alpha");
         FrameLoginPresenca.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        FrameLoginPresenca.setSize(600, 440);
+        FrameLoginPresenca.setSize(500, 600);
         FrameLoginPresenca.setLocationRelativeTo(null);
         FrameLoginPresenca.add(PanelLoginPresenca);
         FrameLoginPresenca.pack();
